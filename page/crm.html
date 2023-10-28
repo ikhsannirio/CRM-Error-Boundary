@@ -28,17 +28,17 @@
                     <a class="nav-link" aria-current="page" href="../index.html">Dashboard</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="page/crm.html">CRM</a>
+                    <a class="nav-link" href="crm.html">CRM</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Submission</a>
+                    <a class="nav-link" href="submission.html">Submission</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Comission</a>
+                    <a class="nav-link" href="comission.html">Comission</a>
                   </li>
                 </ul>
-                <span class="navbar-item">
-                  Navbar text with an inline element
+                <span class="navbar-item" style="margin-left: 60%;">
+                  <img class="img-fluid" style="height : 70%;width : 70%;margin-top: 5px;" src="../src/img/logo.jpg">
                 </span>
               </div>
             </div>
@@ -55,10 +55,10 @@
     <div class="container mt-1 pt-1">
         <button  type="button"  class="btn btn-outline-primary"  id="clients">Clients</button>
         <button type="button" class="btn btn-outline-primary" id="policy">Policy</button>
-        <button type="button" class="btn btn-outline-primary">Support</button>
+        <button type="button" class="btn btn-outline-primary" id="table">Support</button>
     </div>
 
-<section >
+<section id="clientSection">
     <div class="container mt-1 pt-1" id="clientsTable">
         <table id="example" class="table table-striped" style="width:100%" data-detail-view="true">
             <thead>
@@ -217,10 +217,33 @@
         </div>
 
     </div>
+</section>
 
+<section id="policySection">
     <div class="container mt-1 pt-1" bg-secondary id="policyTable">
-      <h1>Anjay</h1>
+      <div class="m-1 p-5 bg-danger ">
+        <h2>About Our Policy</h2>
+        <h5 style="color: white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet ut, blanditiis rerum illo voluptatem facere architecto deleniti a odio quaerat magnam veritatis vero praesentium dolorum exercitationem, impedit possimus esse maiores.</h5>
     </div>
+    </div>
+</section>
+
+<section id="supportSection">
+  <div class="container mt-1 pt-1" bg-secondary id="supportTable">
+    <div class="m-1 p-5 bg-info ">
+      <center>
+        <h2>Thanks For All The Support From Our Team</h2>
+        <br>
+        <table>
+        <tr>
+          <td><h5>Team A &nbsp;</h5></td>
+          <td><h5>Team B &nbsp;</h5></td>
+          <td><h5>Team C</h5></td>
+        </tr>
+        </table>
+      </center>
+  </div>
+  </div>
 </section>
 
 
@@ -237,13 +260,24 @@
       
       $("#clientsTable").hide();
       $("#policyTable").hide();
+      $("#supportTable").hide();
+      
       $("#clients").click(function(e) {
         $("#clientsTable").show();
         $("#policyTable").hide();
+        $("#supportTable").hide();
       })
+
       $("#policy").click(function(e) {
         $("#clientsTable").hide();
         $("#policyTable").show();
+        $("#supportTable").hide();
+      })
+
+      $("#table").click(function(e) {
+        $("#clientsTable").hide();
+        $("#policyTable").hide();
+        $("#supportTable").show();
       })
     });
 </script>
