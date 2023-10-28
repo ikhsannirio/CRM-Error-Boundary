@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+</head>
+<body>
+
+<section id="header">
+    <div class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Food Corps</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="page/crm.html">CRM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Submission</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Comission</a>
+                  </li>
+                </ul>
+                <span class="navbar-item">
+                  Navbar text with an inline element
+                </span>
+              </div>
+            </div>
+          </nav>
+    </div>
+</section>
+
+    
+    <div class="container mt-5 pt-5">
+        <b><p>CRM</p></b>   
+        <hr>
+    </div>
+
+    <div class="container mt-1 pt-1">
+        <button  type="button"  class="btn btn-outline-primary"  id="clients">Clients</button>
+        <button type="button" class="btn btn-outline-primary" id="policy">Policy</button>
+        <button type="button" class="btn btn-outline-primary">Support</button>
+    </div>
+
+<section >
+    <div class="container mt-1 pt-1" id="clientsTable">
+        <table id="example" class="table table-striped" style="width:100%" data-detail-view="true">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Start Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>Joseph</td>
+                    <td>Lorem Corp</td>
+                    <td>Argentina</td>
+                    <td>2012-05-28</td>
+                    <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal1">Detail</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Adam</td>
+                    <td>Ipsum Inc.</td>
+                    <td>Indonesia</td>
+                    <td>2018-07-05</td>
+                    <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal2">Detail</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Robert</td>
+                    <td>Consetetur Corp</td>
+                    <td>Germany</td>
+                    <td >2009-11-15</td>
+                    <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal3">Detail</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="modal" id="detailModal1" role="dialog">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content" style="width: 500px">
+              <div class="modal-header" style="background-color: #fff">
+                <!-- <h5 class="modal-title">Edit User</h5> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table>
+                  <tr>
+                    <td>Name:</td>
+                    <td>Joseph McCartney</td>
+                  </tr>
+                  <tr>
+                    <td>Company: </td>
+                    <td>Lord Corp</td>
+                  </tr>
+                  <tr>
+                    <td>Location: </td>
+                    <td>Argentina, Rosario</td>
+                  </tr>
+                  <tr>
+                    <td>Start Date: </td>
+                    <td>2012-05-28</td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number: </td>
+                    <td>1234567</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="detailModal2" role="dialog">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content" style="width: 500px">
+              <div class="modal-header" style="background-color: #fff">
+                <!-- <h5 class="modal-title">Edit User</h5> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table>
+                  <tr>
+                    <td>Name:</td>
+                    <td>Adam Harun</td>
+                  </tr>
+                  <tr>
+                    <td>Company: </td>
+                    <td>Ipsum Inc.</td>
+                  </tr>
+                  <tr>
+                    <td>Location: </td>
+                    <td>Indonesia, Jakarta</td>
+                  </tr>
+                  <tr>
+                    <td>Start Date: </td>
+                    <td>2018-07-05</td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number: </td>
+                    <td>7654321</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="detailModal3" role="dialog">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content" style="width: 500px">
+              <div class="modal-header" style="background-color: #fff">
+                <!-- <h5 class="modal-title">Edit User</h5> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table>
+                  <tr>
+                    <td>Name:</td>
+                    <td>Robert William</td>
+                  </tr>
+                  <tr>
+                    <td>Company: </td>
+                    <td>Consetetur Corp</td>
+                  </tr>
+                  <tr>
+                    <td>Location: </td>
+                    <td>Germany, Wolfsburg</td>
+                  </tr>
+                  <tr>
+                    <td>Start Date: </td>
+                    <td>2009-11-15</td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number: </td>
+                    <td>4321765</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-1 pt-1" bg-secondary id="policyTable">
+      <h1>Anjay</h1>
+    </div>
+</section>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+<script>
+    new DataTable('#example');
+  
+    $('.newButton button').on('click',function(){ $('#exampleModal').modal('show'); })
+    $('.newButton button').on('click',function(){ $('#exampleModa2').modal('show'); })
+    $('.newButton button').on('click',function(){ $('#exampleModa3').modal('show'); })
+    $(document).ready(function() {
+      
+      $("#clientsTable").hide();
+      $("#policyTable").hide();
+      $("#clients").click(function(e) {
+        $("#clientsTable").show();
+        $("#policyTable").hide();
+      })
+      $("#policy").click(function(e) {
+        $("#clientsTable").hide();
+        $("#policyTable").show();
+      })
+    });
+</script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+</html>
